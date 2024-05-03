@@ -1,0 +1,143 @@
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.image-container2 {
+    flex: 0 0 calc(50% - 10px); /* Set the width for 2 images per row with some spacing */
+    margin-bottom: 20px;
+    text-align: center; /* Center the images */
+}
+
+.image-container {
+    flex: 0 0 calc(100%); /* Set the width for 2 images per row with some spacing */
+    margin-bottom: 55px;
+    text-align: center; /* Center the images */
+}
+.image-container-first {
+    flex: 0 0 calc(100%); /* Set the width for 2 images per row with some spacing */
+    margin-bottom: -10px;
+    text-align: center; /* Center the images */
+}
+.image-container-last {
+    flex: 0 0 calc(100%); /* Set the width for 2 images per row with some spacing */
+    margin-bottom: 5px;
+    text-align: center; /* Center the images */
+}
+.image-contact {
+    flex: 0 0 calc(100%); /* Set the width for 2 images per row with some spacing */
+    margin-bottom: 5px;
+    text-align: center; /* Center the images */
+}
+.text-contact {
+    flex: 0 0 calc(100%); /* Set the width for 2 images per row with some spacing */
+    margin-bottom: 5px;
+    text-align: center; /* Center the images */
+}
+.thumbnail {
+    height: 600px;
+    width: auto;
+}
+
+.thumbnail-narrow {
+    height: 600px;
+    width: auto;
+}
+
+.thumbnail-narrow-banner {
+    width: 800px;
+    height: auto;
+}
+.image-overlay {
+    display: none;
+    position: fixed;
+    padding-top: 300px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.image-overlay-narrow {
+    display: none;
+    position: fixed;
+    padding-top: 300px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+.enlarged-first {
+    max-width: 170%;
+    max-height: 170%;
+    margin-bottom: -10px;
+}
+.enlarged {
+    max-width: 170%;
+    max-height: 170%;
+}
+
+.optional-text {
+    text-align: center;
+    margin: 20px;
+}
+
+.br {
+    height: 2px;
+    background: rgb(f3, f6, fa);
+}
+#nav .active a {
+    /* color: #555555; /* Change the color to a darker shade */
+    font-weight: bold; /* Optionally make the font bold */
+}
+/* Global reset for anchor tags to remove underlines and borders */
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+/* Styling for the image row container */
+.image-row-buttons {
+    display: flex;
+    justify-content: center; /* Ensure everything stays centered */
+    align-items: center;
+    padding: 40px 0;
+    max-width: 600px; /* Max width can be adjusted as per your design needs */
+    margin: 0 auto; /* This centers the row in the page */
+}
+
+/* Styling for each image link to adjust padding and specific margins */
+.image-link {
+    margin: 0 5px; /* Reduced margin to bring images closer */
+    display: inline-block;
+}
+/* Styling for smaller screens */
+@media (max-width: 1000px) {
+    .thumbnail, .thumbnail-narrow {
+        width: 50%; /* Sets width to 100% of the container */
+        height: auto; /* Adjust height automatically to maintain aspect ratio */
+    }
+}
+
+/* Media query for larger screens */
+@media (min-width: 600px) {
+    .image-link {
+        margin: 0 10px; /* Slightly larger margin for larger screens but still closer than before */
+    }
+}

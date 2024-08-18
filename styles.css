@@ -99,7 +99,7 @@
 .checkerboard {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px; /* Adjust the spacing between images */
+    grid-gap: 5px; /* Adjust the spacing between images */
     margin: 0 10px; /* Space around the checkerboard */
     flex: 0.15; /* Allow checkerboards to grow or shrink as needed */
 }

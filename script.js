@@ -33,3 +33,20 @@ thumbnails_narrow.forEach((thumbnail, index) => {
         body.classList.remove('no-scroll');
     });
 });
+
+const checkboard_items = document.querySelectorAll('.checkboard');
+const checkboard_overlays = document.querySelectorAll('.image-overlay-narrow');
+
+checkboard_items.forEach((checkboard_item, index) => {
+    checkboard_item.addEventListener('click', () => {
+        checkboard_overlays[index].style.display = 'flex';
+        html.classList.add('no-scroll');
+        body.classList.add('no-scroll');
+    });
+
+    checkboard_overlays[index].addEventListener('click', () => {
+        checkboard_overlays[index].style.display = 'none';
+        html.classList.remove('no-scroll');
+        body.classList.remove('no-scroll');
+    });
+});

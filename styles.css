@@ -46,10 +46,6 @@
     width: auto;
 }
 
-.thumbnail-narrow-banner {
-    width: 800px;
-    height: auto;
-}
 .image-overlay {
     display: none;
     position: fixed;
@@ -80,6 +76,55 @@
     z-index: 1;
     overflow-x: auto;
     overflow-y: auto;
+}
+
+/* Container for the entire checkerboard and banner image row */
+.checkerboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* Container for the entire checkerboard and banner image row */
+.checkerboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+/* Checkerboard container to hold the 2x2 grid of images */
+.checkerboard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px; /* Adjust the spacing between images */
+    margin: 0 10px; /* Space around the checkerboard */
+    flex: 0.15; /* Allow checkerboards to grow or shrink as needed */
+}
+
+/* Style for each checkerboard item */
+.checkerboard-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Style for the banner image container */
+.banner-image {
+    flex: 0.4; /* Give the banner image more space proportionally */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px; /* Ensure the banner image has a maximum width */
+}
+
+/* Ensure the banner image itself shrinks proportionally */
+.banner-image img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
 }
 
 .enlarged-first {
@@ -133,11 +178,47 @@ a, a:hover, a:focus, a:active {
         width: 50%; /* Sets width to 100% of the container */
         height: auto; /* Adjust height automatically to maintain aspect ratio */
     }
+
+    .checkerboard-container {
+        flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    }
+
+    .checkerboard {
+        margin: 10px 0;
+    }
+
+    .banner-image {
+        max-width: 30%;
+        margin: 10px 0;
+    }
+
+    .banner-image img {
+        max-width: 30%;
+    }
 }
 
 /* Media query for larger screens */
 @media (min-width: 600px) {
     .image-link {
         margin: 0 10px; /* Slightly larger margin for larger screens but still closer than before */
+    }
+    .banner-image {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .banner-image img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .checkerboard-container {
+        flex-direction: column; /* Stack everything vertically on small screens */
+    }
+
+    .checkerboard,
+    .banner-image {
+        max-width: 100%;
     }
 }
